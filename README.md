@@ -45,7 +45,7 @@ Optional:
 ## Example usage
 
 ```yaml
-uses: MGMResorts/okta-assume-role-action@master
+uses: MGMDV-Orb/okta-assume-role-action@master
 with:
   OKTA_ORG: ${{ secrets.OKTA_ORG }}
   OKTA_AWS_APP_URL: ${{ secrets.OKTA_AWS_APP_URL }}

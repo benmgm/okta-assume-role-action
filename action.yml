@@ -1,0 +1,53 @@
+name: "use OKTA cli tool to login to AWS"
+description: "using cli tool okta assume role to get aws creds"
+inputs:
+  OKTA_ORG:
+    description: "OKTA org"
+    required: true
+  OKTA_AWS_APP_URL:
+    description: "OKTA aws app url"
+    required: true
+  OKTA_USERNAME:
+    description: "OKTA username"
+    required: true
+  OKTA_PASSWORD:
+    description: "OKTA password"
+    required: true
+  OKTA_AWS_ROLE_TO_ASSUME:
+    description: "arn of role to assume"
+    required: true
+  OKTA_PROFILE:
+    description: profile to create
+    required: false
+    default: default
+  OKTA_STS_DURATION:
+    description: session duration in seconds
+    required: false
+    default: 3600
+  OKTA_AWS_REGION:
+    description: default aws region
+    region: false
+    default: us-west-2
+outputs:
+  aws_access_key_id:
+    description: "aws access key"
+  aws_secret_access_key:
+    description: "aws secret access key"
+  region:
+    description: "region to use"
+  aws_session_token:
+    description: "session token"
+  aws_profile:
+    description: "aws profile"
+  user_id:
+    description: "username id"
+  account:
+    description: "aws account id"
+  arn:
+    description: "user arn"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  color: "green"
+  icon: "award"

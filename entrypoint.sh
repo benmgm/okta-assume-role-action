@@ -30,13 +30,12 @@ echo "::add-mask::$aws_access_key_id"
 echo "::add-mask::$aws_secret_access_key"
 echo "::add-mask::$aws_session_token"
 
-
-echo ::set-output name=user_id::$user_id
-echo ::set-output name=account::$account
-echo ::set-output name=arn::$arn
-echo ::set-output name=aws_access_key_id::$aws_access_key_id
-echo ::set-output name=aws_secret_access_key::$aws_secret_access_key
-echo ::set-output name=region::$region
-echo ::set-output name=aws_session_token::$aws_session_token
-echo ::set-output name=aws_profile::$aws_profile
+run: echo "user_id=$user_id" >> $GITHUB_OUTPUT
+run: echo "account=$account" >> $GITHUB_OUTPUT
+run: echo "arn=$arn" >> $GITHUB_OUTPUT
+run: echo "aws_access_key_id=$aws_access_key_id" >> $GITHUB_OUTPUT
+run: echo "aws_secret_access_key=$aws_secret_access_key" >> $GITHUB_OUTPUT
+run: echo "region=$region" >> $GITHUB_OUTPUT
+run: echo "aws_session_token=$aws_session_token" >> $GITHUB_OUTPUT
+run: echo "aws_profile=$aws_profile" >> $GITHUB_OUTPUT
 echo $result

@@ -30,8 +30,6 @@ echo "::add-mask::$aws_access_key_id"
 echo "::add-mask::$aws_secret_access_key"
 echo "::add-mask::$aws_session_token"
 
-echo "the user id is $user_id"
-
 echo "user_id=$user_id" >> $GITHUB_OUTPUT
 echo "account=$account" >> $GITHUB_OUTPUT
 echo "arn=$arn" >> $GITHUB_OUTPUT
